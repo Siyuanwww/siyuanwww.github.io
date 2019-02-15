@@ -1,0 +1,35 @@
+\documentclass[11pt]{article}
+\usepackage{CJK}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{amsmath}
+
+\floatname{algorithm}{Algorithm}
+\begin{document}
+\begin{CJK*}{UTF8}{gkai}
+    \begin{algorithm}
+        \caption{Slope Optimization}
+        \begin{algorithmic}[1]
+            \Function {Slope}{$i,j$}
+                \State \Return {$(y_i-y_j)/(x_i-x_j)$}
+            \EndFunction
+            \State
+            \Function {Solve}{}
+            \For {$i=1 \to n$}
+                \While {$l<r$ \textbf{and} \Call{Slope}{$q[l],q[l+1]$}$\ \le 2\times sum[i]$}
+                    \State $l \gets l+1$
+                \EndWhile
+                \State $f[i] \gets f[q[l]]+(sum[i]-sum[q[l]])^2+m$
+                \While {$l<r$ \textbf{and} \Call{Slope}{$q[r-1],q[r]$}$\ \ge \ $\Call{Slope}{$q[r],i$}}
+                    \State $r \gets r-1$
+                \EndWhile
+                \State $r\gets r+1$
+                \State $q[r]=i$
+            \EndFor
+            \EndFunction
+        \end{algorithmic}
+    \end{algorithm}
+\end{CJK*}
+\end{document}

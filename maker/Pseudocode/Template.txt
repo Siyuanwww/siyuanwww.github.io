@@ -1,0 +1,59 @@
+Package
+
+\documentclass[11pt]{article}
+\usepackage{CJK}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{amsmath}
+
+
+
+Statement
+
+\floatname{algorithm}{Algorithm}
+\begin{document}
+\begin{CJK*}{UTF8}{gkai}
+    \begin{algorithm}
+        \caption{AlgorithmName}
+        \begin{algorithmic}[1]
+
+            % Your Algorithm Here
+
+        \end{algorithmic}
+    \end{algorithm}
+\end{CJK*}
+\end{document}
+
+
+
+Function
+
+\Function {FunctionName}{VariableList}
+\EndFunction
+
+
+
+Keyword
+
+Newline: \State
+
+Assignment: $Variate \gets Value$
+
+Judgement: \If {$Expression$}
+           \Else
+           \EndIf
+
+Loop: \For {$Variate = Initial_Value \to FinalValue$}
+      \EndFor
+      \While {$Expression$}
+      \EndWhile
+
+Boolean: \textbf{and}
+         \textbf{or}
+         \textbf{xor}
+
+Call: \Call {FunctionName}{VariableList}
+
+Return: \Return {$Expression$}
