@@ -1,3 +1,3 @@
 # Siyuan's Blog
 
-Siyuan's Algorithm Blog
+公告：已经迁移到 [新博客](https://orzsiyuan.com/)
